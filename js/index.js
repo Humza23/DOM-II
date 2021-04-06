@@ -15,7 +15,9 @@ const boatImg = document.querySelector('.content-destination img')
 const signUpButton = document.querySelectorAll('.btn')
 
 const busText = document.querySelector('.intro p')
-// console.log(busText)
+
+const contentDestination = document.querySelector('.content-destination')
+console.log(contentDestination)
 
 // EVENT LISTENERS BELOW!!!!!
 
@@ -56,12 +58,23 @@ window.addEventListener('resize', function(event){
     riverImg.style.border = '3rem solid orange'
 })
 
-document.addEventListener('scroll', function(event){
-    boatImg.style.width = '5rem';
+document.addEventListener('click', function(event){
+    boatImg.style.border = '5px solid yellow';
+    event.stopPropagation()
 })
 
 signUpButton.forEach(function(elem){
     elem.addEventListener('click', function(event){
         event.target.style.color = 'green';
 })
+})
+
+navLinks.forEach(function(elem){
+    elem.addEventListener('click',function(event){
+        event.preventDefault()
+})
+})
+
+contentDestination.addEventListener('click', function(event){
+    event.target.style.border = '5px solid pink'
 })
