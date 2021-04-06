@@ -8,12 +8,14 @@ const busImg = document.querySelector('.intro img')
 
 const mapImg = document.querySelector('.content-section img')
 
-const roadImg = document.querySelector('.content-section.inverse-content img')
+const riverImg = document.querySelector('.content-section.inverse-content img')
 
 const boatImg = document.querySelector('.content-destination img')
 
 const signUpButton = document.querySelectorAll('.btn')
-// console.log(signUpButton)
+
+const busText = document.querySelector('.intro p')
+// console.log(busText)
 
 // EVENT LISTENERS BELOW!!!!!
 
@@ -44,4 +46,22 @@ document.addEventListener('keydown', function(event){
     if (event.key === 'Escape'){
     mapImg.style.border = '3rem solid blue';
     }
+})
+
+window.addEventListener('load', function(event){
+    busText.style.fontFamily = 'cursive';
+})
+
+window.addEventListener('resize', function(event){
+    riverImg.style.border = '3rem solid orange'
+})
+
+document.addEventListener('scroll', function(event){
+    boatImg.style.width = '5rem';
+})
+
+signUpButton.forEach(function(elem){
+    elem.addEventListener('click', function(event){
+        event.target.style.color = 'green';
+})
 })
