@@ -64,7 +64,7 @@ document.addEventListener('click', function(event){
 })
 
 signUpButton.forEach(function(elem){
-    elem.addEventListener('click', function(event){
+    elem.addEventListener('mouseup', function(event){
         event.target.style.color = 'green';
 })
 })
